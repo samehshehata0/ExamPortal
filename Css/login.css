@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+@import url('variables.css');
+@import url('components.css');
+
+.secure {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--bg-card);
+    padding: 12px 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.secure img.logo {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    background-color: #ccfbf1;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.secure-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.secure div {
+    display: flex;
+    flex-direction: column;
+}
+
+.secure h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #023534;
+    font-weight: 700;
+}
+
+.secure p {
+    font-size: 13px;
+    margin: 2px 0 0 0;
+    color: #528b96;
+    line-height: 1.4;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    border-bottom: 1px solid #9ee2e8b5; 
+    flex: 1;
+}
+
+.btn-outline {
+    width: 100%;
+    padding: 14px;
+    background: transparent;
+    color: var(--text-accent);
+    border: 2px solid #9ee2e8b5;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: #f0fdfa;
+    border-color: var(--text-accent);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+    .main-container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .intro {
+        max-width: 100%;
+    }
+
+    .secure {
+        justify-content: center;
+        text-align: left;
+    }
+}
+
+@media (max-width: 576px) {
+    .regestiration-form {
+        padding: 25px 20px;
+    }
+
+    .intro-content h1 {
+        font-size: 28px;
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+}
