@@ -1,0 +1,9 @@
+:root {
+    --primary-gradient: linear-gradient(135deg, #0093b3, #009695);
+    --bg-page: #f0fdfde8; 
+    --bg-card: #ffffff;
+    --text-main: #0b2c3a;
+    --text-muted: #64748b;
+    --input-focus: #0092b8;
+    --text-accent: #009695;
+}
