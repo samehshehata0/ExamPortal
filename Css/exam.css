@@ -1,0 +1,140 @@
+:root {
+  --primary-gradient: linear-gradient(135deg, #0093b3, #009695);
+  --bg-page: #f0fdfde8;
+  --bg-card: #ffffff;
+  --text-main: #0b2c3a;
+  --text-muted: #64748b;
+  --input-focus: #0092b8;
+  --text-accent: #009695;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(247, 246, 242, 0.94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  height: var(--nav-h);
+  padding: 0 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+.brand-mark {
+  width: 32px;
+  height: 32px;
+  background: var(--ink);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand-mark svg {
+  width: 16px;
+  height: 16px;
+  stroke: #f7f6f2;
+}
+.navText {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+.navLogo {
+  width: 48px;
+  height: 48px;
+}
+.timer-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--warn-l);
+  border: 1.5px solid rgba(217, 119, 6, 0.25);
+  border-radius: 100px;
+  padding: 0.35rem 1rem;
+  font-family: "DM Mono", monospace;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--warn);
+  transition: all 0.3s;
+  letter-spacing: 0.02em;
+}
+.timer-pill.danger {
+  background: #fef2f2;
+  border-color: rgba(220, 38, 38, 0.3);
+  color: var(--danger);
+  animation: tpulse 1s ease infinite;
+}
+@keyframes tpulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.12);
+  }
+}
+.timer-pill svg {
+  width: 14px;
+  height: 14px;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.user-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.3rem 0.8rem 0.3rem 0.3rem;
+  font-size: 0.8rem;
+  color: var(--ink);
+}
+.avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.62rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.btn-logout {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 0.35rem 0.85rem;
+  color: var(--muted);
+  font-family: "Sora", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-logout:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+  background: #fef2f2;
+}
+.btn-logout svg {
+  width: 13px;
+  height: 13px;
+}
