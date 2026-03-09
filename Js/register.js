@@ -76,8 +76,6 @@ form.addEventListener("submit", function (e) {
 
     localStorage.setItem("user", JSON.stringify(userData));
 
-    setTimeout(() => {
-      window.location.href = "login.html";
-    }, 1000);
+    window.location.replace("login.html");
   }
 });

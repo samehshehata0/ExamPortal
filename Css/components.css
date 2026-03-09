@@ -158,3 +158,29 @@ input.error-border:focus {
     box-shadow: 0 0 5px rgba(220, 53, 69, 0.2);
     outline: none;
 }
+.theme-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background: var(--bg-card);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+
+[data-theme="dark"] img {
+    filter: brightness(0.8) contrast(1.1);
+}
