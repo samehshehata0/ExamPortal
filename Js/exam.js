@@ -1,4 +1,4 @@
-const userData = JSON.parse(localStorage.getItem("ep_user_data") || "{}");
+const userData = JSON.parse(localStorage.getItem("user") || "{}");
 const fullName =
   `${userData.firstName || "Student"} ${userData.lastName || ""}`.trim();
 document.getElementById("navNm").textContent = fullName;

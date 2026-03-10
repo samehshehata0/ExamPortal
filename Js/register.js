@@ -5,6 +5,10 @@ const password = document.getElementById("password");
 const repassword = document.getElementById("repassword");
 const form = document.querySelector(".Form");
 
+if (localStorage.getItem("user")) {
+  window.location.replace("login.html");
+}
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
