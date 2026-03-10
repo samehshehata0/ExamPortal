@@ -1,6 +1,6 @@
 const themeToggle = document.getElementById("theme-toggle");
 const themeIcon = document.getElementById("theme-icon");
-
+const logoImg = document.getElementById("logo-img");
 const currentTheme = localStorage.getItem("theme") || "light";
 document.documentElement.setAttribute("data-theme", currentTheme);
 updateIcon(currentTheme);
@@ -16,4 +16,11 @@ themeToggle.addEventListener("click", () => {
 
 function updateIcon(theme) {
   themeIcon.textContent = theme === "dark" ? "☀️" : "🌙";
+  if (logoImg) {
+    logoImg.src =
+      theme === "dark"
+        ? "../imgs/output-onlinepngtools.png"
+        : "../imgs/open-book.png";
+  }
 }
+
