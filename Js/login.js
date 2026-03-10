@@ -2,10 +2,6 @@ const emailInp = document.getElementById("email");
 const passwordInp = document.getElementById("password");
 const loginForm = document.querySelector(".Form");
 
-if (sessionStorage.getItem("isLoggedIn") === "true") {
-  window.location.replace("exam.html");
-}
-
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
