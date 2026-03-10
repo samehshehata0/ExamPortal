@@ -563,6 +563,11 @@ body::before {
   border-color: var(--ink);
   color: var(--bg);
 }
+[data-theme="dark"] .qb.cur {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #0d1117;
+}
 .qb.ans {
   background: #d1fae5;
   border-color: rgba(5, 150, 105, 0.4);
@@ -937,7 +942,6 @@ body::before {
   }
 }
 
-/* ── Smooth transition on theme switch ── */
 *,
 *::before,
 *::after {
@@ -947,12 +951,10 @@ body::before {
     color 0.25s ease;
 }
 
-/* ── Navbar ── */
 [data-theme="dark"] .navbar {
   background: rgba(13, 17, 23, 0.92);
 }
 
-/* ── Answer options ── */
 [data-theme="dark"] .opt {
   background: #0d1117;
 }
@@ -970,24 +972,20 @@ body::before {
   background: rgba(248, 113, 113, 0.12) !important;
 }
 
-/* ── Question grid buttons ── */
 [data-theme="dark"] .qb {
   background: #0d1117;
 }
 
-/* ── Legend dots ── */
 [data-theme="dark"] .li .ld[style*="#d1fae5"] {
   background: rgba(34, 197, 94, 0.2) !important;
 }
 
-/* ── Sidebar + cards ── */
 [data-theme="dark"] .sc,
 [data-theme="dark"] .q-card,
 [data-theme="dark"] .prog-wrap {
   background: var(--card);
 }
 
-/* ── Review items ── */
 [data-theme="dark"] .ri {
   background: #0d1117;
 }
@@ -1001,7 +999,6 @@ body::before {
   background: rgba(125, 143, 163, 0.1);
 }
 
-/* ── End screen icons ── */
 [data-theme="dark"] .end-ico.ok {
   background: rgba(34, 197, 94, 0.15);
 }
@@ -1015,7 +1012,6 @@ body::before {
   background: rgba(248, 113, 113, 0.15);
 }
 
-/* ── Bootstrap modal ── */
 [data-theme="dark"] .modal-content {
   background: #161b27 !important;
   border-color: #21293a !important;
@@ -1025,7 +1021,6 @@ body::before {
   opacity: 0.6;
 }
 
-/* ── Theme toggle button ── */
 .theme-btn {
   width: 36px;
   height: 36px;
