@@ -15,6 +15,23 @@
   --shadow: 0 2px 20px rgba(13, 17, 23, 0.08);
   --nav-h: 60px;
 }
+[data-theme="dark"] {
+  --bg: #0d1117;
+  --card: #161b27;
+  --ink: #e6edf3;
+  --border: #21293a;
+  --accent: #00c4c3;
+  --accent-l: #0a2a2a;
+  --success: #22c55e;
+  --danger: #f87171;
+  --warn: #fbbf24;
+  --warn-l: #1f1a0e;
+  --mark: #a78bfa;
+  --mark-l: #1e1730;
+  --muted: #7d8fa3;
+  --shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
 *,
 *::before,
 *::after {
@@ -91,6 +108,11 @@ body::before {
 .navLogo {
   width: 48px;
   height: 48px;
+  transition: filter 0.25s ease;
+}
+
+[data-theme="dark"] .navLogo {
+  filter: invert(1);
 }
 .timer-pill {
   display: flex;
@@ -913,4 +935,121 @@ body::before {
   .nav-center {
     display: none;
   }
+}
+
+/* ── Smooth transition on theme switch ── */
+*,
+*::before,
+*::after {
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* ── Navbar ── */
+[data-theme="dark"] .navbar {
+  background: rgba(13, 17, 23, 0.92);
+}
+
+/* ── Answer options ── */
+[data-theme="dark"] .opt {
+  background: #0d1117;
+}
+[data-theme="dark"] .opt:hover,
+[data-theme="dark"] .opt.sel {
+  background: var(--accent-l);
+}
+[data-theme="dark"] .opt-lt {
+  background: #161b27;
+}
+[data-theme="dark"] .opt.cor {
+  background: rgba(34, 197, 94, 0.12) !important;
+}
+[data-theme="dark"] .opt.wrng {
+  background: rgba(248, 113, 113, 0.12) !important;
+}
+
+/* ── Question grid buttons ── */
+[data-theme="dark"] .qb {
+  background: #0d1117;
+}
+
+/* ── Legend dots ── */
+[data-theme="dark"] .li .ld[style*="#d1fae5"] {
+  background: rgba(34, 197, 94, 0.2) !important;
+}
+
+/* ── Sidebar + cards ── */
+[data-theme="dark"] .sc,
+[data-theme="dark"] .q-card,
+[data-theme="dark"] .prog-wrap {
+  background: var(--card);
+}
+
+/* ── Review items ── */
+[data-theme="dark"] .ri {
+  background: #0d1117;
+}
+[data-theme="dark"] .ra.c {
+  background: rgba(34, 197, 94, 0.12);
+}
+[data-theme="dark"] .ra.w {
+  background: rgba(248, 113, 113, 0.12);
+}
+[data-theme="dark"] .ra.s {
+  background: rgba(125, 143, 163, 0.1);
+}
+
+/* ── End screen icons ── */
+[data-theme="dark"] .end-ico.ok {
+  background: rgba(34, 197, 94, 0.15);
+}
+[data-theme="dark"] .end-ico.to {
+  background: rgba(248, 113, 113, 0.15);
+}
+[data-theme="dark"] .end-tag.ok {
+  background: rgba(34, 197, 94, 0.15);
+}
+[data-theme="dark"] .end-tag.to {
+  background: rgba(248, 113, 113, 0.15);
+}
+
+/* ── Bootstrap modal ── */
+[data-theme="dark"] .modal-content {
+  background: #161b27 !important;
+  border-color: #21293a !important;
+}
+[data-theme="dark"] .btn-close {
+  filter: invert(1);
+  opacity: 0.6;
+}
+
+/* ── Theme toggle button ── */
+.theme-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  border: 1.5px solid var(--border);
+  background: var(--card);
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.theme-btn:hover {
+  border-color: var(--accent);
+  background: var(--accent-l);
+}
+html[data-theme="dark"] {
+  background: #0d1117;
+}
+
+html[data-theme="dark"] body {
+  background: #0d1117 !important;
 }
